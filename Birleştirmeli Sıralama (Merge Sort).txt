@@ -1,0 +1,13 @@
+[16,21,11,8,12,22] dizisini birleştirmeli sıralama kullanarak sıralayalım
+
+1-> Dizi çift sayıda elemana sahip olduğundan eleman sayısı eşit iki alt diziye ayrılır:
+	[16,21,11] , [8,12,22]
+2-> Bu alt diziler de kendi içerisinde alt dizilere ayrılır ve elemanlar tek kalıncaya kadar devam edilir:
+	[16], [21,11], [8,12], [22]
+	[16], [21], [11], [8], [12], [22]
+3-> Daha sonra bu elemanlar küçükten büyüğe olacak şekilde birleştirilmeye başlanır:
+	[16], [11,21], [8], [12,22]
+	[11,16,21], [8,12,22]
+	[8,11,12,16,21,22] 
+
+Zaman karmaşıklığı, dizi her seferinde ikiye bölünerek işlem yapıldığından log n, birleştirme esnasında tüm elemanlar okunduğundan n, sonuçta O(n log n) olur.
